@@ -29,7 +29,7 @@ from object_detection.utils import visualization_utils as viz_utils
 app = Flask(__name__,template_folder='template')
 
 # Model saved with Keras model.save()
-MODEL_PATH = 'D:/TensorFlow/workspace/training_demo/exported-models/my_model/saved_model/saved_model.pb'
+MODEL_PATH = 'saved_model.pb'
 category_index = {
         1: {'id': 1, 'name': 'Arduino Uno'},
         2: {'id': 2, 'name': 'Arduino Mega'},
@@ -37,7 +37,7 @@ category_index = {
         }
 # Load your trained model
 #model = load_model(MODEL_PATH)
-detect_fn = tf.saved_model.load('D:/TensorFlow/workspace/training_demo/exported-models/my_model/saved_model/')
+detect_fn = tf.saved_model.load('/')
 # print('Model loaded. Start serving...')
 
 # You can also use pretrained model from Keras
